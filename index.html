@@ -198,44 +198,30 @@
       margin-bottom: 0.5rem;
     }
 
-    /* Projects Section */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-
-    .project-card {
-      position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-      aspect-ratio: 3/2;
-    }
-
-    .project-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .project-card:hover .project-img {
-      transform: scale(1.1);
-    }
-
-    .project-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      padding: 1.5rem;
-      background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
-    }
-
-    .project-card h3 {
-      font-family: var(--font-heading);
-      margin-bottom: 0.5rem;
-    }
+   <!-- Projects Section -->
+<section id="projects" class="section" style="background: var(--secondary);">
+  <h2 class="section-title">Featured Projects</h2>
+  <div class="projects-grid">
+    <!-- Add this new project card first -->
+    <a href="https://ikramsmaili.github.io/Ikosmeticss/" target="_blank" class="project-card">
+      <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="Ikosmeticss Beauty Products" class="project-img">
+      <div class="project-overlay">
+        <h3>Ikosmeticss</h3>
+        <p>Beauty products e-commerce website</p>
+      </div>
+    </a>
+    
+    <!-- Keep your existing projects below -->
+    <a href="#" class="project-card">
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="UI/UX Design Project" class="project-img">
+      <div class="project-overlay">
+        <h3>UI/UX Design</h3>
+        <p>Innovative interface designs</p>
+      </div>
+    </a>
+    <!-- ... other project cards ... -->
+  </div>
+</section>
 
     /* Footer */
     footer {
