@@ -1,464 +1,461 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ikram Smaili | Engineering Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #1a1a2e;
-      --secondary: #16213e;
-      --accent: #0f3460;
-      --text: #e6e6e6;
-      --text-secondary: #b8b8b8;
-      --font-heading: 'Space Grotesk', sans-serif;
-      --font-body: 'Inter', sans-serif;
-    }
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Ikram Smaili | Engineering Portfolio</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+ <style>
+ :root {
+ --primary: #1a1a2e;
+ --secondary: #16213e;
+ --accent: #0f3460;
+ --text: #e6e6e6;
+ --text-secondary: #b8b8b8;
+ --font-heading: 'Space Grotesk', sans-serif;
+ --font-body: 'Inter', sans-serif;
+ }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
 
-    body {
-      font-family: var(--font-body);
-      color: var(--text);
-      background: var(--primary);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
+ body {
+ font-family: var(--font-body);
+ color: var(--text);
+ background: var(--primary);
+ line-height: 1.6;
+ overflow-x: hidden;
+ }
 
-    /* Navigation */
-    .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5rem 5%;
-      z-index: 1000;
-      background: rgba(26, 26, 46, 0.8);
-      backdrop-filter: blur(10px);
-    }
+ /* Navigation */
+ .navbar {
+ position: fixed;
+ top: 0;
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 1.5rem 5%;
+ z-index: 1000;
+ background: rgba(26, 26, 46, 0.8);
+ backdrop-filter: blur(10px);
+ }
 
-    .nav-logo {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 1.5rem;
-      color: var(--text);
-      text-decoration: none;
-    }
+ .nav-logo {
+ font-family: var(--font-heading);
+ font-weight: 700;
+ font-size: 1.5rem;
+ color: var(--text);
+ text-decoration: none;
+ }
 
-    .nav-menu {
-      display: flex;
-      gap: 2rem;
-    }
+ .nav-menu {
+ display: flex;
+ gap: 2rem;
+ }
 
-    .nav-link {
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 500;
-      position: relative;
-      padding: 0.5rem 0;
-    }
+ .nav-link {
+ color: var(--text);
+ text-decoration: none;
+ font-weight: 500;
+ position: relative;
+ padding: 0.5rem 0;
+ }
 
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--accent);
-      transition: width 0.3s ease;
-    }
+ .nav-link::after {
+ content: '';
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ width: 0;
+ height: 2px;
+ background: var(--accent);
+ transition: width 0.3s ease;
+ }
 
-    .nav-link:hover::after {
-      width: 100%;
-    }
+ .nav-link:hover::after {
+ width: 100%;
+ }
 
-    /* Hero Section */
-    .hero {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 0 5%;
-      position: relative;
-      overflow: hidden;
-    }
+ /* Hero Section */
+ .hero {
+ height: 100vh;
+ display: flex;
+ align-items: center;
+ padding: 0 5%;
+ position: relative;
+ overflow: hidden;
+ }
 
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, var(--primary) 0%, rgba(15, 52, 96, 0.8) 100%);
-      z-index: -1;
-    }
+ .hero::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: linear-gradient(135deg, var(--primary) 0%, rgba(15, 52, 96, 0.8) 100%);
+ z-index: -1;
+ }
 
-    .hero-content {
-      max-width: 800px;
-    }
+ .hero-content {
+ max-width: 800px;
+ }
 
-    .hero h1 {
-      font-family: var(--font-heading);
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      margin-bottom: 1.5rem;
-      line-height: 1.2;
-    }
+ .hero h1 {
+ font-family: var(--font-heading);
+ font-size: clamp(2.5rem, 5vw, 4rem);
+ margin-bottom: 1.5rem;
+ line-height: 1.2;
+ }
 
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      color: var(--text-secondary);
-    }
+ .hero p {
+ font-size: 1.2rem;
+ margin-bottom: 2rem;
+ color: var(--text-secondary);
+ }
 
-    .btn {
-      display: inline-block;
-      padding: 0.8rem 2rem;
-      background: var(--accent);
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: 500;
-      transition: transform 0.3s ease, background 0.3s ease;
-    }
+ .btn {
+ display: inline-block;
+ padding: 0.8rem 2rem;
+ background: var(--accent);
+ color: white;
+ text-decoration: none;
+ border-radius: 4px;
+ font-weight: 500;
+ transition: transform 0.3s ease, background 0.3s ease;
+ }
 
-    .btn:hover {
-      transform: translateY(-3px);
-      background: #1a508b;
-    }
+ .btn:hover {
+ transform: translateY(-3px);
+ background: #1a508b;
+ }
 
-    .btn-outline {
-      background: transparent;
-      border: 2px solid var(--accent);
-      margin-left: 1rem;
-    }
+ .btn-outline {
+ background: transparent;
+ border: 2px solid var(--accent);
+ margin-left: 1rem;
+ }
 
-    /* About Section */
-    .section {
-      padding: 6rem 5%;
-    }
+ /* About Section */
+ .section {
+ padding: 6rem 5%;
+ }
 
-    .section-title {
-      font-family: var(--font-heading);
-      font-size: 2.5rem;
-      margin-bottom: 3rem;
-      position: relative;
-      display: inline-block;
-    }
+ .section-title {
+ font-family: var(--font-heading);
+ font-size: 2.5rem;
+ margin-bottom: 3rem;
+ position: relative;
+ display: inline-block;
+ }
 
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 60%;
-      height: 4px;
-      background: var(--accent);
-    }
+ .section-title::after {
+ content: '';
+ position: absolute;
+ bottom: -10px;
+ left: 0;
+ width: 60%;
+ height: 4px;
+ background: var(--accent);
+ }
 
-    .about-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 3rem;
-    }
+ .about-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 3rem;
+ }
 
-    .about-card {
-      background: var(--secondary);
-      padding: 2rem;
-      border-radius: 8px;
-      transition: transform 0.3s ease;
-    }
+ .about-card {
+ background: var(--secondary);
+ padding: 2rem;
+ border-radius: 8px;
+ transition: transform 0.3s ease, opacity 0.5s ease; /* Added opacity to transition here or ensure it's in JS */
+ }
 
-    .about-card:hover {
-      transform: translateY(-10px);
-    }
+ .about-card:hover {
+ transform: translateY(-10px);
+ }
 
-    .about-card h3 {
-      font-family: var(--font-heading);
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
+ .about-card h3 {
+ font-family: var(--font-heading);
+ font-size: 1.5rem;
+ margin-bottom: 1rem;
+ }
 
-    .tag {
-      display: inline-block;
-      padding: 0.3rem 0.8rem;
-      background: rgba(15, 52, 96, 0.3);
-      border-radius: 20px;
-      font-size: 0.9rem;
-      margin-right: 0.5rem;
-      margin-bottom: 0.5rem;
-    }
+ .tag {
+ display: inline-block;
+ padding: 0.3rem 0.8rem;
+ background: rgba(15, 52, 96, 0.3);
+ border-radius: 20px;
+ font-size: 0.9rem;
+ margin-right: 0.5rem;
+ margin-bottom: 0.5rem;
+ }
 
-  /* Projects Section --> */
+ /* Projects Section */
+ .projects-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+ gap: 2rem;
+ }
 
+ .project-card {
+ position: relative;
+ overflow: hidden;
+ border-radius: 8px;
+ aspect-ratio: 3/2;
+ transition: transform 0.3s ease, opacity 0.5s ease; /* Added opacity to transition here or ensure it's in JS */
+ }
 
-     /* Projects Section */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 2rem;
-    }
+ .project-img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ transition: transform 0.5s ease;
+ }
 
-    .project-card {
-      position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-      aspect-ratio: 3/2;
-    }
+ .project-card:hover .project-img {
+ transform: scale(1.1);
+ }
 
-    .project-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
+ .project-overlay {
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ width: 100%;
+ padding: 1.5rem;
+ background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
+ }
 
-    .project-card:hover .project-img {
-      transform: scale(1.1);
-    }
+ .project-card h3 {
+ font-family: var(--font-heading);
+ margin-bottom: 0.5rem;
+ }
+ 
+ footer {
+ background: var(--secondary); /* Uses a CSS variable for background color */
+ padding: 4rem 5%; /* 4rem top/bottom, 5% left/right padding */
+ text-align: center; /* Centers text horizontally */
+ }
 
-    .project-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      padding: 1.5rem;
-      background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
-    }
+ footer h2 {
+ font-family: var(--font-heading);
+ font-size: 2.5rem;
+ margin-bottom: 2rem;
+ }
 
-    .project-card h3 {
-      font-family: var(--font-heading);
-      margin-bottom: 0.5rem;
-    }
+ .footer-links {
+ display: flex;
+ justify-content: center;
+ gap: 2rem;
+ margin-top: 2rem;
+ }
 
-    
-<section id="projects" class="section" style="background: var(--secondary);">
-  <h2 class="section-title">Featured Projects</h2>
-  <div class="projects-grid">
-    <!-- Add this new project card first -->
-    <a href="https://ikramsmaili.github.io/Ikosmeticss/" target="_blank" class="project-card">
-      <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="Ikosmeticss Beauty Products" class="project-img">
-      <div class="project-overlay">
-        <h3>Ikosmeticss</h3>
-        <p>Beauty products e-commerce website</p>
-      </div>
-    </a>
-    
-    <!-- Keep your existing projects below -->
-    <a href="#" class="project-card">
-      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="UI/UX Design Project" class="project-img">
-      <div class="project-overlay">
-        <h3>UI/UX Design</h3>
-        <p>Innovative interface designs</p>
-      </div>
-    </a>
-    <!-- ... other project cards ... -->
-  </div>
-</section>
+ .footer-link {
+ color: var(--text);
+ text-decoration: none;
+ transition: color 0.3s ease;
+ }
 
-     
-    /* Footer */
-    footer {
-      background: var(--secondary);
-      padding: 4rem 5%;
-      text-align: center;
-    }
+ .footer-link:hover {
+ color: var(--accent);
+ }
 
-    footer h2 {
-      font-family: var(--font-heading);
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-    }
+ /* Phone number styling */
+ .phone-number {
+ direction: ltr;
+ unicode-bidi: bidi-override;
+ }
 
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
+ /* Responsive */
+ @media (max-width: 768px) {
+ .nav-menu {
+ display: none;
+ }
 
-    .footer-link {
-      color: var(--text);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
+ .hero {
+ text-align: center;
+ }
 
-    .footer-link:hover {
-      color: var(--accent);
-    }
+ .btn-group {
+ display: flex;
+ flex-direction: column;
+ gap: 1rem;
+ }
 
-    /* Phone number styling */
-    .phone-number {
-      direction: ltr;
-      unicode-bidi: bidi-override;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .nav-menu {
-        display: none;
-      }
-
-      .hero {
-        text-align: center;
-      }
-
-      .btn-group {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      .btn-outline {
-        margin-left: 0;
-      }
-      
-      .footer-links {
-        flex-direction: column;
-        gap: 1rem;
-      }
-    }
-  </style>
+ .btn-outline {
+ margin-left: 0;
+ }
+ 
+ .footer-links {
+ flex-direction: column;
+ gap: 1rem;
+ }
+ }
+ </style>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <a href="#" class="nav-logo">IKRAM.SMAILI</a>
-    <div class="nav-menu">
-      <a href="#projects" class="nav-link">Projects</a>
-      <a href="#about" class="nav-link">About</a>
-      <a href="#contact" class="nav-link">Contact</a>
-    </div>
-  </nav>
+ <!-- Navigation -->
+ <nav class="navbar">
+ <a href="#" class="nav-logo">IKRAM.SMAILI</a>
+ <div class="nav-menu">
+ <a href="#projects" class="nav-link">Projects</a>
+ <a href="#about" class="nav-link">About</a>
+ <a href="#contact" class="nav-link">Contact</a>
+ </div>
+ </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Electrical Engineer &<br>Creative Developer</h1>
-      <p>Specializing in hydrogen technologies, web development, and robotics innovation.</p>
-      <div class="btn-group">
-        <a href="#projects" class="btn">View Projects</a>
-        <a href="#contact" class="btn btn-outline">Contact Me</a>
-      </div>
-    </div>
-  </section>
+ <!-- Hero Section -->
+ <section class="hero">
+ <div class="hero-content">
+ <h1>Electrical Engineer &<br>Creative Developer</h1>
+ <p>Specializing in hydrogen technologies, web development, and robotics innovation.</p>
+ <div class="btn-group">
+ <a href="#projects" class="btn">View Projects</a>
+ <a href="#contact" class="btn btn-outline">Contact Me</a>
+ </div>
+ </div>
+ </section>
 
-  <!-- About Section -->
-  <section id="about" class="section">
-    <h2 class="section-title">About Me</h2>
-    <div class="about-grid">
-      <div class="about-card">
-        <h3>Education</h3>
-        <p>Electrical Engineering student at National Polytechnic School, ranked 32nd in entrance exams with a focus on hydrogen technologies.</p>
-        <div class="tags">
-          <span class="tag">Electrical Engineering</span>
-          <span class="tag">Renewable Energy</span>
-        </div>
-      </div>
-      <div class="about-card">
-        <h3>Skills</h3>
-        <p>UI/UX design, web development (HTML/CSS/JavaScript), and robotics with Arduino. Passionate about bridging engineering and design.</p>
-        <div class="tags">
-          <span class="tag">CSS/HTML</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">Arduino</span>
-        </div>
-      </div>
-      <div class="about-card">
-        <h3>Approach</h3>
-        <p>Combining technical engineering skills with creative problem-solving to develop innovative solutions for real-world challenges.</p>
-        <div class="tags">
-          <span class="tag">Problem Solving</span>
-          <span class="tag">Innovation</span>
-        </div>
-      </div>
-    </div>
-  </section>
+ <!-- About Section -->
+ <section id="about" class="section">
+ <h2 class="section-title">About Me</h2>
+ <div class="about-grid">
+ <div class="about-card">
+ <h3>Education</h3>
+ <p>Electrical Engineering student at National Polytechnic School, ranked 32nd in entrance exams with a focus on hydrogen technologies.</p>
+ <div class="tags">
+ <span class="tag">Electrical Engineering</span>
+ <span class="tag">Renewable Energy</span>
+ </div>
+ </div>
+ <div class="about-card">
+ <h3>Skills</h3>
+ <p>UI/UX design, web development (HTML/CSS/JavaScript), and robotics with Arduino. Passionate about bridging engineering and design.</p>
+ <div class="tags">
+ <span class="tag">CSS/HTML</span>
+ <span class="tag">JavaScript</span>
+ <span class="tag">Arduino</span>
+ </div>
+ </div>
+ <div class="about-card">
+ <h3>Approach</h3>
+ <p>Combining technical engineering skills with creative problem-solving to develop innovative solutions for real-world challenges.</p>
+ <div class="tags">
+ <span class="tag">Problem Solving</span>
+ <span class="tag">Innovation</span>
+ </div>
+ </div>
+ </div>
+ </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section" style="background: var(--secondary);">
-    <h2 class="section-title">Featured Projects</h2>
-    <div class="projects-grid">
-      <a href="#" class="project-card">
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="UI/UX Design Project" class="project-img">
-        <div class="project-overlay">
-          <h3>UI/UX Design</h3>
-          <p>Innovative interface designs</p>
-        </div>
-      </a>
-      <a href="#" class="project-card">
-        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" alt="Web Development Project" class="project-img">
-        <div class="project-overlay">
-          <h3>Web Development</h3>
-          <p>Interactive web applications</p>
-        </div>
-      </a>
-      <a href="#" class="project-card">
-        <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a7b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Robotics Project" class="project-img">
-        <div class="project-overlay">
-          <h3>Robotics</h3>
-          <p>Automated control systems</p>
-        </div>
-      </a>
-    </div>
-  </section>
+ <!-- Projects Section -->
+ <section id="projects" class="section" style="background: var(--secondary);">
+ <h2 class="section-title">Featured Projects</h2>
+ <div class="projects-grid">
+ <!-- New Project Card: Ikosmeticss -->
+ <a href="https://ikramsmaili.github.io/Ikosmeticss/" target="_blank" class="project-card">
+ <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="Ikosmeticss Beauty Products" class="project-img">
+ <div class="project-overlay">
+ <h3>Ikosmeticss</h3>
+ <p>Beauty products e-commerce website</p>
+ </div>
+ </a>
+ <!-- Existing Project Card 1: UI/UX Design -->
+ <a href="#" class="project-card">
+ <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="UI/UX Design Project" class="project-img">
+ <div class="project-overlay">
+ <h3>UI/UX Design</h3>
+ <p>Innovative interface designs</p>
+ </div>
+ </a>
+ <!-- Existing Project Card 2: Web Development -->
+ <a href="#" class="project-card">
+ <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" alt="Web Development Project" class="project-img">
+ <div class="project-overlay">
+ <h3>Web Development</h3>
+ <p>Interactive web applications</p>
+ </div>
+ </a>
+ <!-- Existing Project Card 3: Robotics -->
+ <a href="#" class="project-card">
+ <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a7b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Robotics Project" class="project-img">
+ <div class="project-overlay">
+ <h3>Robotics</h3>
+ <p>Automated control systems</p>
+ </div>
+ </a>
+ </div>
+ </section>
 
-  <!-- Contact Section -->
-  <footer id="contact">
-    <h2>Get In Touch</h2>
-    <p>Interested in collaborating or learning more about my work?</p>
-    <a href="mailto:ikram.smaili@g.enp.edu.dz" class="btn" style="margin-top: 2rem;">Email Me</a>
-    <div class="footer-links">
-      <a href="https://www.linkedin.com/in/ikram-smaili-642925279/" target="_blank" class="footer-link">LinkedIn</a>
-      <a href="https://github.com/IkramSMAILI" target="_blank" class="footer-link">GitHub</a>
-      <span class="phone-number">0784118644 / 0662360676</span>
-    </div>
-  </footer>
+ <!-- Contact Section -->
+ <footer id="contact">
+ <h2>Get In Touch</h2>
+ <p>Interested in collaborating or learning more about my work?</p>
+ <a href="mailto:ikram.smaili@g.enp.edu.dz" class="btn" style="margin-top: 2rem;">Email Me</a>
+ <div class="footer-links">
+ <a href="https://www.linkedin.com/in/ikram-smaili-642925279/" target="_blank" class="footer-link">LinkedIn</a>
+ <a href="https://github.com/IkramSMAILI" target="_blank" class="footer-link">GitHub</a>
+ <span class="phone-number">0784118644 / 0662360676</span>
+ </div>
+ </footer>
 
-  <script>
-    // Simple scroll animation
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
+ <script>
+ // Simple scroll animation for nav links
+ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+ anchor.addEventListener('click', function(e) {
+ e.preventDefault();
+ document.querySelector(this.getAttribute('href')).scrollIntoView({
+ behavior: 'smooth'
+ });
+ });
+ });
 
-    // Scroll reveal animation
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate');
-        }
-      });
-    }, { threshold: 0.1 });
+ // Scroll reveal animation for cards
+ const cardsToAnimate = document.querySelectorAll('.about-card, .project-card');
 
-    document.querySelectorAll('.about-card, .project-card').forEach(card => {
-      observer.observe(card);
-      card.style.opacity = '0';
-      card.style.transform = 'translateY(20px)';
-      card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    });
+ const observerOptions = {
+ threshold: 0.1 // Trigger when 10% of the card is visible
+ };
 
-    // When cards come into view
-    document.addEventListener('DOMContentLoaded', () => {
-      const animateCards = document.querySelectorAll('.animate');
-      animateCards.forEach(card => {
-        card.style.opacity = '1';
-        card.style.transform = 'translateY(0)';
-      });
-    });
-  </script>
+ const observer = new IntersectionObserver((entries, obs) => { // 'obs' is the observer itself
+ entries.forEach(entry => {
+ if (entry.isIntersecting) {
+ // Apply styles to make the card visible
+ entry.target.style.opacity = '1';
+ entry.target.style.transform = 'translateY(0)';
+ 
+ // Optional: Add a class if you want to use it for other CSS effects or JS logic
+ // entry.target.classList.add('animate'); 
+ 
+ // Stop observing the element once it has animated in
+ obs.unobserve(entry.target);
+ }
+ });
+ }, observerOptions);
+
+ cardsToAnimate.forEach(card => {
+ // Set initial styles for the animation (hidden and translated)
+ card.style.opacity = '0';
+ card.style.transform = 'translateY(20px)';
+ // Ensure the transition is set for opacity and transform. 
+ // It can be set here in JS or in the CSS for .about-card and .project-card.
+ // If not already in CSS, add it here:
+ card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+ 
+ // Start observing the card
+ observer.observe(card);
+ });
+
+ // The previous DOMContentLoaded listener for animation is removed as it was causing issues.
+ // Its logic is now handled directly by the IntersectionObserver.
+ </script>
 </body>
 </html>
+
